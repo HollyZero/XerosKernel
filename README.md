@@ -7,13 +7,14 @@
 
 #### Specific kernel function links
 
-* Memory management 
-* Process Creation
-* Context Switch
-* Process Scheduling - with pre-emption 
-* Interprocess Communication using direct messaging
-* Signaling
-* Hardware Device Interaction
+* [Memory management](https://github.com/HollyZero/XerosKernel/blob/master/c/mem.c) 
+* [Process Creation](https://github.com/HollyZero/XerosKernel/blob/master/c/create.c)
+* [Context Switch](https://github.com/HollyZero/XerosKernel/blob/master/c/ctsw.c)
+* [Process Scheduling - with pre-emption](https://github.com/HollyZero/XerosKernel/blob/master/c/disp.c) 
+* [Interprocess Communication using direct messaging](https://github.com/HollyZero/XerosKernel/blob/master/c/msg.c)
+* [Signaling](https://github.com/HollyZero/XerosKernel/blob/master/c/signal.c)
+* [Hardware Device Interaction](https://github.com/HollyZero/XerosKernel/blob/master/c/di_calls.c)
+* [Sleeping](https://github.com/HollyZero/XerosKernel/blob/master/c/sleep.c)
 
 #### Running the project
 
