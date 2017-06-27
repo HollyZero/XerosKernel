@@ -1,10 +1,6 @@
-/* msg.c : messaging system 
-   This file does not need to modified until assignment 2
- */
+/* msg.c : messaging system  */
 
 #include <xeroskernel.h>
-
-/* Your code goes here.... */
 
 
 extern struct pcb * receiveFromAnyQ;
@@ -168,12 +164,8 @@ extern int receive(int *srcPID, struct pcb* destPCB, unsigned long* len){
 	}
 	/* CASE: sender has not sent yet */
 	else if (srcPCB->state != BLOCK){
-		//kprintf(" |receiver: no sender yet| ");	
-		kprintf("                           ");
 		/*remove receiver from ready queue */
 		reconsReadyQ(destPCB);
-		kprintf("                           ");
-		kprintf("                           ");
 		/* save message on PCB*/
 		destPCB->u_p_num = len;
 		/*add receiver on sender's blocked queue */	

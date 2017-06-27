@@ -55,29 +55,14 @@ void initproc( void )				/* The beginning */
 
   kprintf( "\n\nCPSC 415, 2016W1 \n32 Bit Xeros 0.01 \nLocated at: %x to %x\n", &entry, &end); 
   
-  //kprintf("Some sample output to illustrate different types of printing\n\n");
-
-  /* A busy wait to pause things on the screen, Change the value used 
-     in the termination condition to control the pause
-   */
-
-  //for (i = 0; i < 3000000; i++);
 
   /* Build a string to print) */
   sprintf(str, 
       "This is the number -69 when printed signed %d unsigned %u hex %x and a string %s.\n      Sample printing of 1024 in signed %d, unsigned %u and hex %x.\n",
 	  b, b, b, "Hello", a, a, a);
 
-  /* Print the string */
-
-  //kprintf("\n\nThe %dstring is: \"%s\"\n\nThe formula is %d + %d = %d.\n\n\n", a, str, a, b, a + b);
-
   for (i = 0; i < 1000000; i++);
-  /* or just on its own */
-  //kprintf(str);
 
-  /* Add your code below this line and before next comment */
-  // kprintf("init: creating root 1-----"); 
   /* initialize memory manager lists */
    kmeminit();
 
@@ -101,14 +86,11 @@ void initproc( void )				/* The beginning */
   /* create idle process, we know it is PCB[0] 
 	 and it is not on any queue for now
    */
-  // kprintf("init: creating root 3-----");  
   create(&wrapper, &idleproc, PROCESS_STACK_SIZE);
   idle_proc = &pcb_table[0];   
  
   /* create root process*/
-  // kprintf("init: creating root 4-----");
   create(&wrapper, &root, PROCESS_STACK_SIZE);
-  // print_queue(ready_queue_head);
 
   dispatch();
   /* Add all of your code before this comment and after the previous comment */
@@ -172,10 +154,6 @@ void init_entry(int i){
 
 void devtab_init(void){
 
-  /* TODO initialize devtab, here is an example of how 
-  devtab[CONSOLE].dvopen = consoleopen;
-  */
-
   /* only got 2 devices, so I can use a loop */
   int i;
   for (i=0;i<DEVICE_TABLE_SIZE; i++){
@@ -194,11 +172,8 @@ void devtab_init(void){
     devtab[i].dvovec = NULL;
     devtab[i].dviint = NULL;
     devtab[i].dvoint = NULL;
-    /*TODO: if read is wrong, then check here */
     devtab[i].dvioblk = (void *)device_g_buffer+i*BUFFER_SIZE;   
     devtab[i].dvminor = i;
   }
-  /* device specific */
-  // devtab[KB_0].dvname = "keybaord echo";
-  // devtab[KB_1].dvname = "keybaord non-echo";  
+
 }

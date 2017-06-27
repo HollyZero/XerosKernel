@@ -1,6 +1,4 @@
-/* signal.c - support for signal handling
-   This file is not used until Assignment 3
- */
+/* signal.c - support for signal handling */
 
 #include <xeroskernel.h>
 #include <xeroslib.h>

@@ -1,10 +1,6 @@
-/* mem.c : memory manager
- */
+/* mem.c : memory manager */
 
 #include <xeroskernel.h>
-
-/* Your code goes here */
-
 #include <i386.h>
 #include <limits.h>
 
@@ -59,8 +55,6 @@ extern void kmeminit(void){
  *
  */
 
- /*TODO 	Issue: when smallestDiff == 0, memory is corrputed when you set
-	the fields of resultSlot.*/
 extern void *kmalloc( int size){
 
 	/* Compute amount of memory to set aside for this request */

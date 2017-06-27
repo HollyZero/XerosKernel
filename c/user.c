@@ -1,5 +1,4 @@
-/* user.c : User processes
- */
+/* user.c : User processes */
 
 #include <xeroskernel.h>
 #include <xeroslib.h>
@@ -42,12 +41,8 @@ static char * valid_commands[] = {
 /* wrapper function so we don't need to use sysstop() 
  */
 void wrapper(void (*func) (void)){
-	// kprintf("func is %ld \n" , func);
-	// kprintf("func address is %ld \n" , &func);
-	// kprintf("root is %ld \n" , &root);
 	func();
 	sysstop();
-	//for (;;);
 }
 
 /* idle process that will only run when there is no other process

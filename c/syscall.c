@@ -1,11 +1,7 @@
-/* syscall.c : syscalls
- */
+/* syscall.c : syscalls */
 
 #include <xeroskernel.h>
 #include <stdarg.h>
-
-/* Your code goes here */
-/* Need to create a trap in here. */
 
 /*
  Purpose:	system call for 3 arguments, using registers 

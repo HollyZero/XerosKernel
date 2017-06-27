@@ -1,8 +1,7 @@
-/* create.c : create a process
- */
+/* create.c : create a process*/
 
 #include <xeroskernel.h>
-/* Your code goes here. */
+
 extern struct pcb *ready_queue_head; /* head of ready queue */
 extern struct pcb* idle_proc; 
 extern struct pcb *ready_queue_tail; /* tail of ready queue */
@@ -43,7 +42,6 @@ extern int create(void (*func) (void (*) (void)),void (*real_func) (void),int st
 	
 	/* allocate this pcb */
 	tmp->PID = p_count; 
-	/* TODO change p_count to recycle from triple the value HELPER */
 	p_count++;
 	if (real_func == &idleproc){
 		tmp->state = IDLE;

@@ -1,6 +1,4 @@
-/* sleep.c : sleep device 
-   This file does not need to modified until assignment 2
- */
+/* sleep.c : sleep device  */
 
 #include <xeroskernel.h>
 #include <xeroslib.h>

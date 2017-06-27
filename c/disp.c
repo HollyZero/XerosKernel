@@ -7,7 +7,6 @@
 #include <xeroslib.h>
 #include <stdarg.h>
 #include <kbd.h>
-/* Your code goes here */
 
 /* Manage ready queue */
 extern struct pcb *ready_queue_head; /* head of ready queue */
